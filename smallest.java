@@ -25,9 +25,31 @@ public class smallest {
     }
     return -1;
   }
+  public static void reverse(int arr[]){
+    int temp ; 
+    int first = 0;
+    int last = arr.length-1;
+    while(first<last){
+      temp = arr[last];
+      arr[last] = arr[first];
+      arr[first] = temp;
+      first ++;
+      last --;
+    }
+  }
+  public static void pairsinarray(int arr[]){
+    for(int i = 1; i<arr.length; i++){
+     for(int j = i+1; j<arr.length; j++){
+      System.out.print("(" + arr[i] + "," + arr[j] + ")");
+     }
+     System.out.println();
+    }
+    System.out.println();
+  }
+
+
   public static void main(String args[]){
     int arr[] = {1,2,3,4,5,6};
-    int key = 4;
-    System.out.print("index is found at the key " + binarySearch(arr, key));
+    pairsinarray(arr);
   }
 }
